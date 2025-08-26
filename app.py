@@ -1,7 +1,7 @@
 
 import streamlit as st
 from sentiment_logic import get_sentiment_data
-from telegram_alert import send_telegram_alert
+from telegram_alert import send_telegram_alert, send_test_alert
 
 st.set_page_config(page_title="Sentiment Dashboard", layout="wide")
 
@@ -18,3 +18,9 @@ if st.button("Run Scan & Send Alerts"):
         st.success("Alert sent via Telegram!")
     else:
         st.info("No actionable signals found.")
+
+# 🔔 Test Alert Button
+if st.button("Send Test Alert"):
+    send_test_alert()
+    st.success("✅ Test alert sent to Telegram!")
+
