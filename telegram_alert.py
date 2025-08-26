@@ -24,5 +24,6 @@ def send_test_alert():
         "MA Pullback: Yes"
     )
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-    requests.post(url, data={"chat_id": chat_id, "text": message})
+    response = requests.post(url, data={"chat_id": chat_id, "text": message})
+    print("Response:", response.status_code, response.text)
 
