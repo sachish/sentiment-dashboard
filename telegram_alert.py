@@ -1,4 +1,3 @@
-
 import requests
 
 # Replace these with your actual credentials
@@ -8,10 +7,8 @@ chat_id = "1111326679"
 def send_telegram_alert(df):
     for _, row in df.iterrows():
         message = (
-            f"📢 {row['Signal']} ALERT: {row['Ticker']}
-"
-            f"RSI: {row['RSI']} | P/C: {row['Put/Call']} | IV: {row['IV Trend']}
-"
+            f"📢 {row['Signal']} ALERT: {row['Ticker']}\n"
+            f"RSI: {row['RSI']} | P/C: {row['Put/Call']} | IV: {row['IV Trend']}\n"
             f"MA Pullback: {'Yes' if row['MA Pullback'] else 'No'}"
         )
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
