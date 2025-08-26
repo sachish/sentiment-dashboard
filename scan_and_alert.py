@@ -1,4 +1,3 @@
-
 from sentiment_logic import get_sentiment_data
 from telegram_alert import send_telegram_alert
 
