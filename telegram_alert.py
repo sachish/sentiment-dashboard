@@ -1,4 +1,5 @@
-import requests
+from telegram_alert import send_telegram_alert, send_test_alert
+
 
 # Replace these with your actual credentials
 bot_token = "8291039527:AAH6T3UN5lIllWjsb7EvLFdK27Q_znxFcYw"
