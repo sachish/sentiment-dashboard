@@ -13,3 +13,16 @@ def send_telegram_alert(df):
         )
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
         requests.post(url, data={"chat_id": chat_id, "text": message})
+
+
+def send_test_alert():
+    message = (
+        "🚨 TEST ALERT 🚨\n"
+        "Ticker: AAPL\n"
+        "Signal: CALL\n"
+        "RSI: 65 | P/C: 0.88 | IV: Rising\n"
+        "MA Pullback: Yes"
+    )
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    requests.post(url, data={"chat_id": chat_id, "text": message})
+
