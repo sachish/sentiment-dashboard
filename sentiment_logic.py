@@ -3,7 +3,7 @@ import pandas as pd
 import yfinance as yf
 
 def get_sentiment_data():
-    tickers = ["AAPL", "MSFT", "NVDA", "GOOGL", "AMZN", "META", "TSLA", "JPM", "V", "UNH"]
+    tickers = ["AAPL", "MSFT", "NVDA", "GOOGL", "AMZN", "META", "TSLA", "JPM", "V", "UNH", "NFLX"]
     rows = []
 
     for ticker in tickers:
