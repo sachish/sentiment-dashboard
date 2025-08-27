@@ -15,7 +15,7 @@ if st.button("Run Scan & Send Alerts"):
     matches = data[data['Signal'].isin(["CALL", "PUT", "EQUITY+"])]
     if not matches.empty:
         send_telegram_alert(matches)
-        st.success("Alert sent via Telegram!")
+        st.success(" ✅ Alert sent via Telegram!")
     else:
         st.info("No actionable signals found.")
 
